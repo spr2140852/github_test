@@ -7,20 +7,28 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 78,
+        centerTitle: true,
+        backgroundColor: Color(0xffcce5ff),
         title: const Text('ホーム',
           style: TextStyle(
-            fontSize: 28.0,
-            color: Color(0xff666666)
+            fontSize: 30.0,
+            color: Colors.black
           ),
         ),
       ),
-      body: const Center(
-          child: Text('ホーム画面',
-              style: TextStyle(
-                  fontSize: 32.0
-              ),
-          ),
-      ),
+      body: Column(
+            children: [
+              Container(
+                width: 210,
+                height: 170,
+                child: Image(
+                  image: AssetImage('images/shimaenaga.png'),
+                  fit: BoxFit.contain,
+                ),
+              )
+            ]
+      )
     );
   }
 }

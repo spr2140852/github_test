@@ -48,10 +48,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedFontSize: 15.0,
+        unselectedFontSize: 12.0,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem> [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム',),
           BottomNavigationBarItem(icon: Icon(Icons.handshake), label: '除雪依頼'),
           BottomNavigationBarItem(icon: Icon(Icons.wysiwyg), label: '除雪状況'),
           BottomNavigationBarItem(icon: Icon(Icons.message), label: 'メッセージ'),
